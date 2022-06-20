@@ -6,5 +6,4 @@ public class Praktikum {
         Account account = new Account(nameSurname);
         account.checkNameToEmboss();
     }
-
 }

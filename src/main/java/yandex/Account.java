@@ -16,13 +16,17 @@ public class Account {
 
     public boolean checkNameToEmboss() {
 
-        String firstChar = name.substring(0, 1);
-        String lastChar = name.substring(name.length() -1, name.length());
-
-        if (name.length() >= 3 && name.length() <= 19 && ! firstChar.equals(" ") && ! lastChar.equals(" ") && StringUtils.countMatches(name, " ") == 1) {
-            return true;
+        if (name == null){
+            return false;
         }
-        else return false;
+            else if (name.length() >= 3) {
+            String firstChar = name.substring(0, 1);
+            String lastChar = name.substring(name.length() - 1, name.length());
+            if (name.length() <= 19 && !firstChar.equals(" ") && !lastChar.equals(" ") && StringUtils.countMatches(name, " ") == 1) {
+                return true;
+            }
+            return false;
+        }
+        return false;
     }
-
 }

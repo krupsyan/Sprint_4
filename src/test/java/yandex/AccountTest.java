@@ -30,6 +30,8 @@ public class AccountTest {
                 {" ББ", false},
                 {"ББ ", false},
                 {"АБВГД ЕЁЖЗ ИЙКЛМНОП", false},
+                {null, false},
+                {"", false},
         };
     }
 
@@ -39,7 +41,7 @@ public class AccountTest {
     }
 
     @Test
-    public void main() {
+    public void checkNameToEmbossTest() {
         boolean actual = account.checkNameToEmboss();
 
         String message = format("Актуальное значение отличается от ожидаемого значения. %nАктуальное значение: %s %nОжидаемое значение:%s %nТестовая строка: \"%s\"%n", actual, expected, account.getName());
